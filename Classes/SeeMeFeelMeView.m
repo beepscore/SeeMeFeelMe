@@ -12,6 +12,7 @@
 @implementation SeeMeFeelMeView
 
 @synthesize dragViewOne;
+@synthesize dragViewTwo;
 
 
 /*
@@ -30,17 +31,15 @@
 #pragma mark Memory management methods
 - (void)dealloc {
     [dragViewOne release], dragViewOne = nil;
+    [dragViewTwo release], dragViewTwo = nil;
     [super dealloc];
 }
 
 
 #pragma mark UI
-- (void)moveView:(UIView *)aView ForTouches:(NSSet *)touches withEvent:(UIEvent *)event {
+// Move aView to the touch location
+- (void)moveView:(UIView *)aView ForTouch:(UITouch *)touch {
     
-    // We only support single touches, so anyObject retrieves just that touch from touches
-	UITouch *touch = [touches anyObject];
-	
-	// If the touch was in the dragView, move the dragView to its location
 	if (aView == [touch view]) {
 		CGPoint location = [touch locationInView:self];
 		aView.center = location;		
@@ -49,14 +48,32 @@
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+
+    // We only support single touches, so anyObject retrieves just that touch from touches
+	UITouch *touch = [touches anyObject];
 	
-    [self moveView:self.dragViewOne ForTouches:touches withEvent:event];
+	// If the touch was in the dragView, move the dragView to its location
+	if ([touch view] == self.dragViewOne) {
+		[self moveView:self.dragViewOne ForTouch:touch];	
+    }
+	if ([touch view] == self.dragViewTwo) {
+		[self moveView:self.dragViewTwo ForTouch:touch];	
+    }
 }
 
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
 	
-    [self moveView:self.dragViewOne ForTouches:touches withEvent:event];
+    // We only support single touches, so anyObject retrieves just that touch from touches
+	UITouch *touch = [touches anyObject];
+	
+	// If the touch was in the dragView, move the dragView to its location
+	if ([touch view] == self.dragViewOne) {
+		[self moveView:self.dragViewOne ForTouch:touch];	
+    }
+	if ([touch view] == self.dragViewTwo) {
+		[self moveView:self.dragViewTwo ForTouch:touch];	
+    }
 }
 
 
@@ -66,8 +83,8 @@
 
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-	self.dragViewOne.center = self.center;
-	self.dragViewOne.transform = CGAffineTransformIdentity;
+//	self.dragViewOne.center = self.center;
+//	self.dragViewOne.transform = CGAffineTransformIdentity;
 }
 
 @end

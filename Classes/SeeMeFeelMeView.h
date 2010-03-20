@@ -13,9 +13,11 @@
 @interface SeeMeFeelMeView : UIView {
 #pragma mark instance variables
 	DragView *dragViewOne;
+	DragView *dragViewTwo;
 }
 
 #pragma mark properties
 @property (nonatomic, retain) IBOutlet DragView *dragViewOne;
+@property (nonatomic, retain) IBOutlet DragView *dragViewTwo;
 
 @end
