@@ -16,7 +16,7 @@
     
 }
 #pragma mark properties
-@property(nonatomic,retain)DragView *dragOne;
+@property(nonatomic,retain) IBOutlet DragView *dragOne;
 
 @end
 
