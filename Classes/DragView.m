@@ -10,7 +10,6 @@
 
 @implementation DragView
 
-
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         // Initialization code
@@ -27,6 +26,5 @@
 - (void)dealloc {
     [super dealloc];
 }
-
 
 @end
