@@ -49,15 +49,18 @@ void SystemSoundsDemoCompletionProc (
 
 
 // deluxe version with callbacks
-- (void)playSoundAtURL:(NSURL *)cafURL {
+// iPhone "system sound" file types must be uncompressed .aif, .caf, or .wav
+// Some previous .caf files played on the simulator but not on an iPod, probably they were compressed.
+// I used GarageBand to import the .caf files and export uncompressed .aif files.
+- (void)playSoundAtURL:(NSURL *)soundURL {
     
 	// create a system sound id
 	SystemSoundID soundID;
     
 	OSStatus err = kAudioServicesNoError;
     
-    // find corresponding CAF file
-    err = AudioServicesCreateSystemSoundID((CFURLRef) cafURL, &soundID);    
+    // find corresponding system sound file
+    err = AudioServicesCreateSystemSoundID((CFURLRef) soundURL, &soundID);    
     
     if (err == kAudioServicesNoError) {
         // set up callback for sound completion
@@ -110,16 +113,16 @@ void SystemSoundsDemoCompletionProc (
     // Ref Dudney sec 18.3
     if (1 == touch.tapCount) {
         if ([touch view] == self.dragViewOne) {
-            NSString *cafPath = 
+            NSString *soundPath = 
             [[NSBundle mainBundle] pathForResource:@"CartoonChipmunk" ofType:@"aif"];
-            NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
-            [self playSoundAtURL:cafURL];
+            NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+            [self playSoundAtURL:soundURL];
         }
         if ([touch view] == self.dragViewTwo) {
-            NSString *cafPath = 
+            NSString *soundPath = 
             [[NSBundle mainBundle] pathForResource:@"SqueezeToy" ofType:@"aif"];
-            NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
-            [self playSoundAtURL:cafURL];
+            NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+            [self playSoundAtURL:soundURL];
         }
     }
 	
