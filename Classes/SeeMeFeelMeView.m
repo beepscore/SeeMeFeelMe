@@ -106,13 +106,21 @@ void SystemSoundsDemoCompletionProc (
     // We only support single touches, so anyObject retrieves just that touch from touches
 	UITouch *touch = [touches anyObject];
     
+    // Play a sound when view is tapped
     // Ref Dudney sec 18.3
     if (1 == touch.tapCount) {
-        //[self playSound];
-        NSString *cafPath = 
-        [[NSBundle mainBundle] pathForResource:@"Cartoon Chipmunk" ofType:@"caf"];
-        NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
-        [self playSoundAtURL:cafURL];
+        if ([touch view] == self.dragViewOne) {
+            NSString *cafPath = 
+            [[NSBundle mainBundle] pathForResource:@"Cartoon Chipmunk" ofType:@"caf"];
+            NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
+            [self playSoundAtURL:cafURL];
+        }
+        if ([touch view] == self.dragViewTwo) {
+            NSString *cafPath = 
+            [[NSBundle mainBundle] pathForResource:@"Squeeze Toy" ofType:@"caf"];
+            NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
+            [self playSoundAtURL:cafURL];
+        }
     }
 	
 	// If the touch was in the dragView, move the dragView to its location
