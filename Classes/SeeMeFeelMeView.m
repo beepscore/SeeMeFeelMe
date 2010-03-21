@@ -22,7 +22,7 @@
 - (id)initWithFrame:(CGRect)frame {
 	
 	if (self = [super initWithFrame:frame]) {
-
+        
 	}
 	return self;
 }
@@ -33,6 +33,63 @@
     [dragViewOne release], dragViewOne = nil;
     [dragViewTwo release], dragViewTwo = nil;
     [super dealloc];
+}
+
+
+#pragma mark Sound play methods
+// This function ends with };
+// status callback function (notice this is a c function, not an obj-c method)
+void SystemSoundsDemoCompletionProc (
+                                     SystemSoundID  soundID,
+                                     void           *clientData)
+{
+	AudioServicesDisposeSystemSoundID (soundID);
+	// ((SystemSoundsDemoViewController*)clientData).statusLabel.text = @"Stopped";
+};
+
+
+// deluxe version with callbacks
+- (void)playSound {
+    
+	// create a system sound id
+	SystemSoundID soundID;
+    
+	OSStatus err = kAudioServicesNoError;
+    
+    // find corresponding CAF file
+    NSString *cafPath = 
+    [[NSBundle mainBundle] pathForResource:@"Cartoon Chipmunk" ofType:@"caf"];
+    NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
+    err = AudioServicesCreateSystemSoundID((CFURLRef) cafURL, &soundID);    
+    
+    if (err == kAudioServicesNoError) {
+        // set up callback for sound completion
+        err = AudioServicesAddSystemSoundCompletion
+        (soundID,		// sound to monitor
+         NULL,			// run loop (NULL==main)
+         NULL,			// run loop mode (NULL==default)
+         SystemSoundsDemoCompletionProc, // callback function
+         self			// data to provide on callback
+         );
+        
+//        statusLabel.text = @"Playing";
+        AudioServicesPlaySystemSound (soundID);
+    }
+    
+    if (err != kAudioServicesNoError) {
+        CFErrorRef error = CFErrorCreate(NULL, kCFErrorDomainOSStatus, err, NULL);
+        NSString *errorDesc = (NSString*) CFErrorCopyDescription (error);
+        UIAlertView *cantPlayAlert =
+        [[UIAlertView alloc] initWithTitle:@"Cannot Play:"
+                                   message: errorDesc
+                                  delegate:nil
+                         cancelButtonTitle:@"OK"
+                         otherButtonTitles:nil];
+        [cantPlayAlert show];
+        [cantPlayAlert release]; 
+        [errorDesc release];
+        CFRelease (error);
+    }    
 }
 
 
@@ -48,9 +105,14 @@
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-
+    
     // We only support single touches, so anyObject retrieves just that touch from touches
 	UITouch *touch = [touches anyObject];
+    
+    // Ref Dudney sec 18.3
+    if (1 == touch.tapCount) {
+        [self playSound];
+    }
 	
 	// If the touch was in the dragView, move the dragView to its location
 	if ([touch view] == self.dragViewOne) {
@@ -78,13 +140,11 @@
 
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-
+    
 }
 
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-//	self.dragViewOne.center = self.center;
-//	self.dragViewOne.transform = CGAffineTransformIdentity;
 }
 
 @end
