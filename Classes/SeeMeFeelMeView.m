@@ -49,7 +49,7 @@ void SystemSoundsDemoCompletionProc (
 
 
 // deluxe version with callbacks
-- (void)playSound {
+- (void)playSoundAtURL:(NSURL *)cafURL {
     
 	// create a system sound id
 	SystemSoundID soundID;
@@ -57,9 +57,6 @@ void SystemSoundsDemoCompletionProc (
 	OSStatus err = kAudioServicesNoError;
     
     // find corresponding CAF file
-    NSString *cafPath = 
-    [[NSBundle mainBundle] pathForResource:@"Cartoon Chipmunk" ofType:@"caf"];
-    NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
     err = AudioServicesCreateSystemSoundID((CFURLRef) cafURL, &soundID);    
     
     if (err == kAudioServicesNoError) {
@@ -72,7 +69,7 @@ void SystemSoundsDemoCompletionProc (
          self			// data to provide on callback
          );
         
-//        statusLabel.text = @"Playing";
+        // statusLabel.text = @"Playing";
         AudioServicesPlaySystemSound (soundID);
     }
     
@@ -111,7 +108,11 @@ void SystemSoundsDemoCompletionProc (
     
     // Ref Dudney sec 18.3
     if (1 == touch.tapCount) {
-        [self playSound];
+        //[self playSound];
+        NSString *cafPath = 
+        [[NSBundle mainBundle] pathForResource:@"Cartoon Chipmunk" ofType:@"caf"];
+        NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
+        [self playSoundAtURL:cafURL];
     }
 	
 	// If the touch was in the dragView, move the dragView to its location
