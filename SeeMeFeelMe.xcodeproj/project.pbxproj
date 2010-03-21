@@ -16,9 +16,9 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* SeeMeFeelMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SeeMeFeelMeViewController.m */; };
 		DE0BB7E41154558900B9C35A /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0BB7E31154558900B9C35A /* DragView.m */; };
-		DE66E4FC1155D9F500DD2ECC /* Squeeze Toy.caf in Resources */ = {isa = PBXBuildFile; fileRef = DE66E4FB1155D9F400DD2ECC /* Squeeze Toy.caf */; };
-		DE66E4FE1155DA0100DD2ECC /* Cartoon Chipmunk.caf in Resources */ = {isa = PBXBuildFile; fileRef = DE66E4FD1155DA0100DD2ECC /* Cartoon Chipmunk.caf */; };
 		DE66E5071155DA8B00DD2ECC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE66E5061155DA8B00DD2ECC /* AudioToolbox.framework */; };
+		DE95BEBE11560578007A1F7C /* CartoonChipmunk.aif in Resources */ = {isa = PBXBuildFile; fileRef = DE95BEBD11560578007A1F7C /* CartoonChipmunk.aif */; };
+		DE95BEC011560581007A1F7C /* SqueezeToy.aif in Resources */ = {isa = PBXBuildFile; fileRef = DE95BEBF11560581007A1F7C /* SqueezeToy.aif */; };
 		DEF335281154CC9200B071C7 /* SeeMeFeelMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */; };
 /* End PBXBuildFile section */
 
@@ -38,9 +38,9 @@
 		8D1107310486CEB800E47090 /* SeeMeFeelMe-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SeeMeFeelMe-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		DE0BB7E21154558900B9C35A /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
 		DE0BB7E31154558900B9C35A /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
-		DE66E4FB1155D9F400DD2ECC /* Squeeze Toy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Squeeze Toy.caf"; sourceTree = "<group>"; };
-		DE66E4FD1155DA0100DD2ECC /* Cartoon Chipmunk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cartoon Chipmunk.caf"; sourceTree = "<group>"; };
 		DE66E5061155DA8B00DD2ECC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DE95BEBD11560578007A1F7C /* CartoonChipmunk.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartoonChipmunk.aif; sourceTree = "<group>"; };
+		DE95BEBF11560581007A1F7C /* SqueezeToy.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SqueezeToy.aif; sourceTree = "<group>"; };
 		DEF335261154CC9200B071C7 /* SeeMeFeelMeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeMeFeelMeView.h; sourceTree = "<group>"; };
 		DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeMeFeelMeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,8 +107,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DE66E4FD1155DA0100DD2ECC /* Cartoon Chipmunk.caf */,
-				DE66E4FB1155D9F400DD2ECC /* Squeeze Toy.caf */,
+				DE95BEBF11560581007A1F7C /* SqueezeToy.aif */,
+				DE95BEBD11560578007A1F7C /* CartoonChipmunk.aif */,
 				2899E5210DE3E06400AC0155 /* SeeMeFeelMeViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* SeeMeFeelMe-Info.plist */,
@@ -171,8 +171,8 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* SeeMeFeelMeViewController.xib in Resources */,
-				DE66E4FC1155D9F500DD2ECC /* Squeeze Toy.caf in Resources */,
-				DE66E4FE1155DA0100DD2ECC /* Cartoon Chipmunk.caf in Resources */,
+				DE95BEBE11560578007A1F7C /* CartoonChipmunk.aif in Resources */,
+				DE95BEC011560581007A1F7C /* SqueezeToy.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

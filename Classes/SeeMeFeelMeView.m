@@ -111,13 +111,13 @@ void SystemSoundsDemoCompletionProc (
     if (1 == touch.tapCount) {
         if ([touch view] == self.dragViewOne) {
             NSString *cafPath = 
-            [[NSBundle mainBundle] pathForResource:@"Cartoon Chipmunk" ofType:@"caf"];
+            [[NSBundle mainBundle] pathForResource:@"CartoonChipmunk" ofType:@"aif"];
             NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
             [self playSoundAtURL:cafURL];
         }
         if ([touch view] == self.dragViewTwo) {
             NSString *cafPath = 
-            [[NSBundle mainBundle] pathForResource:@"Squeeze Toy" ofType:@"caf"];
+            [[NSBundle mainBundle] pathForResource:@"SqueezeToy" ofType:@"aif"];
             NSURL *cafURL = [NSURL fileURLWithPath:cafPath];
             [self playSoundAtURL:cafURL];
         }
