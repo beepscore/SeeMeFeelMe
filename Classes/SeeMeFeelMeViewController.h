@@ -9,7 +9,6 @@
 //  Ref Dudney iPhone SDK Development Ch 18 Draw, Ch 17 Core Audio
 
 #import <UIKit/UIKit.h>
-#import "DragView.h"
 @class SoundHelper;
 
 @interface SeeMeFeelMeViewController : UIViewController {
@@ -18,6 +17,7 @@
 }
 
 #pragma mark properties
+// instantiate soundHelper in .xib file, connect IBOutlet to retain it
 @property(nonatomic,retain)IBOutlet SoundHelper *soundHelper;
 
 @end

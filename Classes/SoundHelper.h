@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+// need to import <DragViewSoundDelegate> protocol declaration
 #import "DragView.h"
 
 
