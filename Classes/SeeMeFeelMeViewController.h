@@ -10,10 +10,15 @@
 
 #import <UIKit/UIKit.h>
 #import "DragView.h"
+@class SoundHelper;
 
 @interface SeeMeFeelMeViewController : UIViewController {
-
+#pragma mark instance variables
+    SoundHelper *soundHelper;
 }
+
+#pragma mark properties
+@property(nonatomic,retain)IBOutlet SoundHelper *soundHelper;
 
 @end
 

@@ -11,6 +11,7 @@
 @implementation SeeMeFeelMeViewController
 
 #pragma mark properties
+@synthesize soundHelper;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -62,14 +63,14 @@
 // set properties to nil, which also releases them
 - (void)setView:(UIView *)newView {
     if (nil == newView) {
-
+        self.soundHelper = nil;
     }    
     [super setView:newView];
 }
 
 
 - (void)dealloc {
-
+    [soundHelper release], soundHelper = nil;
     [super dealloc];
 }
 

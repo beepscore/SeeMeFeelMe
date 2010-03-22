@@ -36,63 +36,6 @@
 }
 
 
-#pragma mark Sound play methods
-// This function ends with };
-// status callback function (notice this is a c function, not an obj-c method)
-void SystemSoundsDemoCompletionProc (
-                                     SystemSoundID  soundID,
-                                     void           *clientData)
-{
-	AudioServicesDisposeSystemSoundID (soundID);
-	// ((SystemSoundsDemoViewController*)clientData).statusLabel.text = @"Stopped";
-};
-
-
-// deluxe version with callbacks
-// iPhone "system sound" file types must be uncompressed .aif, .caf, or .wav
-// Some previous .caf files played on the simulator but not on an iPod, probably they were compressed.
-// I used GarageBand to import the .caf files and export uncompressed .aif files.
-- (void)playSoundAtURL:(NSURL *)soundURL {
-    
-	// create a system sound id
-	SystemSoundID soundID;
-    
-	OSStatus err = kAudioServicesNoError;
-    
-    // find corresponding system sound file
-    err = AudioServicesCreateSystemSoundID((CFURLRef) soundURL, &soundID);    
-    
-    if (err == kAudioServicesNoError) {
-        // set up callback for sound completion
-        err = AudioServicesAddSystemSoundCompletion
-        (soundID,		// sound to monitor
-         NULL,			// run loop (NULL==main)
-         NULL,			// run loop mode (NULL==default)
-         SystemSoundsDemoCompletionProc, // callback function
-         self			// data to provide on callback
-         );
-        
-        // statusLabel.text = @"Playing";
-        AudioServicesPlaySystemSound (soundID);
-    }
-    
-    if (err != kAudioServicesNoError) {
-        CFErrorRef error = CFErrorCreate(NULL, kCFErrorDomainOSStatus, err, NULL);
-        NSString *errorDesc = (NSString*) CFErrorCopyDescription (error);
-        UIAlertView *cantPlayAlert =
-        [[UIAlertView alloc] initWithTitle:@"Cannot Play:"
-                                   message: errorDesc
-                                  delegate:nil
-                         cancelButtonTitle:@"OK"
-                         otherButtonTitles:nil];
-        [cantPlayAlert show];
-        [cantPlayAlert release]; 
-        [errorDesc release];
-        CFRelease (error);
-    }    
-}
-
-
 #pragma mark UI
 // Move aView to the touch location
 - (void)moveView:(UIView *)aView ForTouch:(UITouch *)touch {
@@ -116,13 +59,16 @@ void SystemSoundsDemoCompletionProc (
             NSString *soundPath = 
             [[NSBundle mainBundle] pathForResource:@"CartoonChipmunk" ofType:@"aif"];
             NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
-            [self playSoundAtURL:soundURL];
+            self.dragViewOne.dragViewSoundURL = soundURL;
+            // FIXME:  this crashes program !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            [self.dragViewOne playSound];
         }
         if ([touch view] == self.dragViewTwo) {
             NSString *soundPath = 
             [[NSBundle mainBundle] pathForResource:@"SqueezeToy" ofType:@"aif"];
             NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
-            [self playSoundAtURL:soundURL];
+            self.dragViewTwo.dragViewSoundURL = soundURL;
+            [self.dragViewTwo playSound];
         }
     }
 	

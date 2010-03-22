@@ -8,8 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DragViewSoundDelegate;
+
 @interface DragView : UIView {
-
+#pragma mark instance variables
+    id <DragViewSoundDelegate> delegate;
+    NSURL *dragViewSoundURL;
 }
+#pragma mark properties
+// Note: assign delegate, don't retain it
+@property(nonatomic,assign)id <DragViewSoundDelegate> delegate;
 
+@property(nonatomic,retain)NSURL *dragViewSoundURL;
+
+- (void)playSound;
+@end
+
+@protocol DragViewSoundDelegate
+- (void)playSoundAtURL:(NSURL *)soundURL;
 @end

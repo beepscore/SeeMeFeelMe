@@ -17,6 +17,7 @@
 		28D7ACF80DDB3853001CB0EB /* SeeMeFeelMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SeeMeFeelMeViewController.m */; };
 		DE0BB7E41154558900B9C35A /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0BB7E31154558900B9C35A /* DragView.m */; };
 		DE66E5071155DA8B00DD2ECC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE66E5061155DA8B00DD2ECC /* AudioToolbox.framework */; };
+		DE70BC9A1156A78E00F75A8E /* SoundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE70BC991156A78E00F75A8E /* SoundHelper.m */; };
 		DE95BEBE11560578007A1F7C /* CartoonChipmunk.aif in Resources */ = {isa = PBXBuildFile; fileRef = DE95BEBD11560578007A1F7C /* CartoonChipmunk.aif */; };
 		DE95BEC011560581007A1F7C /* SqueezeToy.aif in Resources */ = {isa = PBXBuildFile; fileRef = DE95BEBF11560581007A1F7C /* SqueezeToy.aif */; };
 		DEF335281154CC9200B071C7 /* SeeMeFeelMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */; };
@@ -39,6 +40,8 @@
 		DE0BB7E21154558900B9C35A /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
 		DE0BB7E31154558900B9C35A /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
 		DE66E5061155DA8B00DD2ECC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DE70BC981156A78E00F75A8E /* SoundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundHelper.h; sourceTree = "<group>"; };
+		DE70BC991156A78E00F75A8E /* SoundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundHelper.m; sourceTree = "<group>"; };
 		DE95BEBD11560578007A1F7C /* CartoonChipmunk.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartoonChipmunk.aif; sourceTree = "<group>"; };
 		DE95BEBF11560581007A1F7C /* SqueezeToy.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SqueezeToy.aif; sourceTree = "<group>"; };
 		DEF335261154CC9200B071C7 /* SeeMeFeelMeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeMeFeelMeView.h; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 				DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */,
 				DE0BB7E21154558900B9C35A /* DragView.h */,
 				DE0BB7E31154558900B9C35A /* DragView.m */,
+				DE70BC981156A78E00F75A8E /* SoundHelper.h */,
+				DE70BC991156A78E00F75A8E /* SoundHelper.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				28D7ACF80DDB3853001CB0EB /* SeeMeFeelMeViewController.m in Sources */,
 				DE0BB7E41154558900B9C35A /* DragView.m in Sources */,
 				DEF335281154CC9200B071C7 /* SeeMeFeelMeView.m in Sources */,
+				DE70BC9A1156A78E00F75A8E /* SoundHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
