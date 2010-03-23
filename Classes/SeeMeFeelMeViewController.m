@@ -30,12 +30,24 @@
 */
 
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"SeeMeFeelMeViewController viewDidLoad");
+    
+//    NSString *soundPathOne = [[NSBundle mainBundle] 
+//                              pathForResource:@"CartoonChipmunk" ofType:@"aif"];
+//    NSURL *soundURLOne = [NSURL fileURLWithPath:soundPathOne];
+//    self.view.dragViewOne.dragViewSoundURL = soundURLOne;
+//    
+//    NSString *soundPathTwo = [[NSBundle mainBundle] 
+//                              pathForResource:@"CartoonChipmunk" ofType:@"aif"];
+//    NSURL *soundURLTwo = [NSURL fileURLWithPath:soundPathTwo];
+//    self.view.dragViewTwo.dragViewSoundURL = soundURLTwo;
+    
 }
-*/
+
 
 
 /*

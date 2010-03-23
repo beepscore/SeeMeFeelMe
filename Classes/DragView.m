@@ -28,13 +28,61 @@
 
 
 - (void)dealloc {
-    [dragViewSoundURL release], dragViewSoundURL = nil;
-
+    [dragViewSoundURL release], dragViewSoundURL = nil;    
     [super dealloc];
 }
 
 - (void)playSound {
+    
+    NSString *soundPath = [[NSBundle mainBundle] 
+                              pathForResource:@"CartoonChipmunk" ofType:@"aif"];
+    NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+    self.dragViewSoundURL = soundURL;    
+    
+    
     [self.delegate playSoundAtURL:self.dragViewSoundURL];
+}
+
+
+#pragma mark UI
+// Move to the touch location
+- (void)moveForTouch:(UITouch *)touch {
+    
+    CGPoint location = [touch locationInView:self.superview];
+    self.center = location;
+}
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    // We only support single touches, so anyObject retrieves just that touch from touches
+	UITouch *touch = [touches anyObject];
+    
+    // Play a sound when view is tapped
+    // Ref Dudney sec 18.3
+    if (1 == touch.tapCount) {
+        [self playSound];
+    }	
+	// Move the dragView to the touch location
+    [self moveForTouch:touch];	
+}
+
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+    // We only support single touches, so anyObject retrieves just that touch from touches
+	UITouch *touch = [touches anyObject];
+	
+	// Move the dragView to its location
+    [self moveForTouch:touch];	
+}
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+}
+
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
 }
 
 @end
