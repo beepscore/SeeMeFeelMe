@@ -39,12 +39,12 @@
     NSLog(@"SeeMeFeelMeViewController viewDidLoad");
     
     NSString *soundPathOne = [[NSBundle mainBundle] 
-                              pathForResource:@"CartoonChipmunk" ofType:@"aif"];
+                              pathForResource:@"CartoonChipmunk" ofType:@"caf"];
     NSURL *soundURLOne = [NSURL fileURLWithPath:soundPathOne];
     self.dragViewOne.dragViewSoundURL = soundURLOne;
     
     NSString *soundPathTwo = [[NSBundle mainBundle] 
-                              pathForResource:@"SqueezeToy" ofType:@"aif"];
+                              pathForResource:@"SqueezeToy" ofType:@"caf"];
     NSURL *soundURLTwo = [NSURL fileURLWithPath:soundPathTwo];
     self.dragViewTwo.dragViewSoundURL = soundURLTwo;
 }

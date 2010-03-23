@@ -18,8 +18,8 @@
 		DE0BB7E41154558900B9C35A /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0BB7E31154558900B9C35A /* DragView.m */; };
 		DE66E5071155DA8B00DD2ECC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE66E5061155DA8B00DD2ECC /* AudioToolbox.framework */; };
 		DE70BC9A1156A78E00F75A8E /* SoundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE70BC991156A78E00F75A8E /* SoundHelper.m */; };
-		DE95BEBE11560578007A1F7C /* CartoonChipmunk.aif in Resources */ = {isa = PBXBuildFile; fileRef = DE95BEBD11560578007A1F7C /* CartoonChipmunk.aif */; };
-		DE95BEC011560581007A1F7C /* SqueezeToy.aif in Resources */ = {isa = PBXBuildFile; fileRef = DE95BEBF11560581007A1F7C /* SqueezeToy.aif */; };
+		DED24EC91158AB8900ED1AFE /* CartoonChipmunk.caf in Resources */ = {isa = PBXBuildFile; fileRef = DED24EC81158AB8900ED1AFE /* CartoonChipmunk.caf */; };
+		DED24ECB1158AB9B00ED1AFE /* SqueezeToy.caf in Resources */ = {isa = PBXBuildFile; fileRef = DED24ECA1158AB9B00ED1AFE /* SqueezeToy.caf */; };
 		DEF335281154CC9200B071C7 /* SeeMeFeelMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +42,8 @@
 		DE66E5061155DA8B00DD2ECC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DE70BC981156A78E00F75A8E /* SoundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundHelper.h; sourceTree = "<group>"; };
 		DE70BC991156A78E00F75A8E /* SoundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundHelper.m; sourceTree = "<group>"; };
-		DE95BEBD11560578007A1F7C /* CartoonChipmunk.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartoonChipmunk.aif; sourceTree = "<group>"; };
-		DE95BEBF11560581007A1F7C /* SqueezeToy.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = SqueezeToy.aif; sourceTree = "<group>"; };
+		DED24EC81158AB8900ED1AFE /* CartoonChipmunk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartoonChipmunk.caf; sourceTree = "<group>"; };
+		DED24ECA1158AB9B00ED1AFE /* SqueezeToy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SqueezeToy.caf; sourceTree = "<group>"; };
 		DEF335261154CC9200B071C7 /* SeeMeFeelMeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeMeFeelMeView.h; sourceTree = "<group>"; };
 		DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeMeFeelMeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,11 +112,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DE95BEBF11560581007A1F7C /* SqueezeToy.aif */,
-				DE95BEBD11560578007A1F7C /* CartoonChipmunk.aif */,
 				2899E5210DE3E06400AC0155 /* SeeMeFeelMeViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* SeeMeFeelMe-Info.plist */,
+				DED24EC81158AB8900ED1AFE /* CartoonChipmunk.caf */,
+				DED24ECA1158AB9B00ED1AFE /* SqueezeToy.caf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -176,8 +176,8 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* SeeMeFeelMeViewController.xib in Resources */,
-				DE95BEBE11560578007A1F7C /* CartoonChipmunk.aif in Resources */,
-				DE95BEC011560581007A1F7C /* SqueezeToy.aif in Resources */,
+				DED24EC91158AB8900ED1AFE /* CartoonChipmunk.caf in Resources */,
+				DED24ECB1158AB9B00ED1AFE /* SqueezeToy.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

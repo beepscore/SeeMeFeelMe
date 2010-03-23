@@ -13,9 +13,6 @@
 
 
 #pragma mark Sound play methods
-// In Dudney, this function ends with };
-// This link recommends remove the semicolon
-// http://stackoverflow.com/questions/846804/semicolon-at-the-ends-of-if-statements-and-functions-in-c
 // Status callback function (notice this is a c function, not an obj-c method)
 void SystemSoundsDemoCompletionProc (
                                      SystemSoundID  soundID,
@@ -23,6 +20,10 @@ void SystemSoundsDemoCompletionProc (
 {
 	AudioServicesDisposeSystemSoundID (soundID);
 	// ((SystemSoundsDemoViewController*)clientData).statusLabel.text = @"Stopped";
+
+    // In Dudney, this function ends with };
+    // The code works with or without the semicolon.  This link recommends remove the semicolon.
+    // http://stackoverflow.com/questions/846804/semicolon-at-the-ends-of-if-statements-and-functions-in-c
 }
 
 
@@ -31,6 +32,7 @@ void SystemSoundsDemoCompletionProc (
 // .caf is preferred format for iPhone
 // Some previous .caf files played on the simulator but not on an iPod, probably they were compressed.
 // I used GarageBand to import the .caf files and export uncompressed .aif files.
+// Then in Finder I renamed the .aif file extension to .caf
 - (void)playSoundAtURL:(NSURL *)soundURL {
     NSLog(@"playSoundAtURL:");
 	// create a system sound id
