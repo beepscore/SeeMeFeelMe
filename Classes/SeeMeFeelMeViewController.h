@@ -9,16 +9,21 @@
 //  Ref Dudney iPhone SDK Development Ch 18 Draw, Ch 17 Core Audio
 
 #import <UIKit/UIKit.h>
-@class SoundHelper;
 #import "SeeMeFeelMeView.h"
+@class SoundHelper;
 #import "DragView.h"
 
 @interface SeeMeFeelMeViewController : UIViewController {
 #pragma mark instance variables
     SoundHelper *soundHelper;
+	DragView *dragViewOne;
+	DragView *dragViewTwo;    
 }
 
 #pragma mark properties
+@property (nonatomic, retain) IBOutlet DragView *dragViewOne;
+@property (nonatomic, retain) IBOutlet DragView *dragViewTwo;
+
 // instantiate soundHelper in .xib file, connect IBOutlet to retain it
 @property(nonatomic,retain)IBOutlet SoundHelper *soundHelper;
 

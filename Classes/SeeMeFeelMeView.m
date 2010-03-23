@@ -11,22 +11,7 @@
 
 @implementation SeeMeFeelMeView
 
-@synthesize dragViewOne;
-@synthesize dragViewTwo;
-
-
-- (void)setUpDragViews {
-    
-//    NSString *soundPathOne = [[NSBundle mainBundle] 
-//                              pathForResource:@"CartoonChipmunk" ofType:@"aif"];
-//    NSURL *soundURLOne = [NSURL fileURLWithPath:soundPathOne];
-//    self.dragViewOne.dragViewSoundURL = soundURLOne;
-//    
-//    NSString *soundPathTwo = [[NSBundle mainBundle] 
-//                              pathForResource:@"CartoonChipmunk" ofType:@"aif"];
-//    NSURL *soundURLTwo = [NSURL fileURLWithPath:soundPathTwo];
-//    self.dragViewTwo.dragViewSoundURL = soundURLTwo;
-
+- (void)setUpView {
 }
 
 
@@ -37,7 +22,7 @@
 - (id)initWithCoder:(NSCoder *)coder {
 	
 	if (self = [super initWithCoder:coder]) {
-		[self setUpDragViews];
+		[self setUpView];
 	}
 	return self;
 }
@@ -50,7 +35,7 @@
 - (id)initWithFrame:(CGRect)frame {
 	
 	if (self = [super initWithFrame:frame]) {
-		[self setUpDragViews];
+		[self setUpView];
 	}
 	return self;
 }
@@ -58,8 +43,6 @@
 
 #pragma mark Memory management methods
 - (void)dealloc {
-    [dragViewOne release], dragViewOne = nil;
-    [dragViewTwo release], dragViewTwo = nil;
     [super dealloc];
 }
 

@@ -32,14 +32,7 @@
     [super dealloc];
 }
 
-- (void)playSound {
-    
-    NSString *soundPath = [[NSBundle mainBundle] 
-                              pathForResource:@"CartoonChipmunk" ofType:@"aif"];
-    NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
-    self.dragViewSoundURL = soundURL;    
-    
-    
+- (void)playSound {    
     [self.delegate playSoundAtURL:self.dragViewSoundURL];
 }
 
