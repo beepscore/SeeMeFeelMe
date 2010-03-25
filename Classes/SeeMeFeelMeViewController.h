@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "SeeMeFeelMeView.h"
 @class SoundHelper;
-#import "DragView.h"
+@class DragView;
 
 @interface SeeMeFeelMeViewController : UIViewController {
 #pragma mark instance variables

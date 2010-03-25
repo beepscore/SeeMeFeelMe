@@ -7,7 +7,6 @@
 //
 
 #import "SeeMeFeelMeView.h"
-#import "DragView.h"
 
 @implementation SeeMeFeelMeView
 
