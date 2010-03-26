@@ -25,5 +25,5 @@
 @end
 
 @protocol DragViewSoundDelegate
-- (void)playSoundAtURL:(NSURL *)soundURL;
+- (void)dragView:(DragView *)sender didRequestPlaySoundAtURL:(NSURL *)soundURL;
 @end

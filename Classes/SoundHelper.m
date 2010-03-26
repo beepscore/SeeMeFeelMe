@@ -33,7 +33,8 @@ void SystemSoundsDemoCompletionProc (
 // Some previous .caf files played on the simulator but not on an iPod, probably they were compressed.
 // I used GarageBand to import the .caf files and export uncompressed .aif files.
 // Then in Finder I renamed the .aif file extension to .caf
-- (void)playSoundAtURL:(NSURL *)soundURL {
+- (void)dragView:(DragView *)sender didRequestPlaySoundAtURL:(NSURL *)soundURL {
+
     NSLog(@"playSoundAtURL:");
 	// create a system sound id
 	SystemSoundID soundID;

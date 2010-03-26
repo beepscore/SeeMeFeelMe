@@ -33,7 +33,7 @@
 }
 
 - (void)playSound {    
-    [self.delegate playSoundAtURL:self.dragViewSoundURL];
+    [self.delegate dragView:self didRequestPlaySoundAtURL:self.dragViewSoundURL];
 }
 
 
