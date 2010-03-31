@@ -68,27 +68,20 @@
 }
 
 
+// Ref http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmNibObjects.html
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
-
-// set properties to nil, which also releases them
-- (void)setView:(UIView *)newView {
-    if (nil == newView) {
-        self.soundHelper = nil;
-        self.dragViewOne = nil;
-        self.dragViewTwo = nil;
-    }    
-    [super setView:newView];
+    // Release any retained outlets
+    // set properties to nil, which also releases them
+    self.soundHelper = nil;
+    self.dragViewOne = nil;
+    self.dragViewTwo = nil;
+    
+    [super viewDidUnload];
 }
 
 
 - (void)dealloc {
-    [soundHelper release], soundHelper = nil;
-    [dragViewOne release], dragViewOne = nil;
-    [dragViewTwo release], dragViewTwo = nil;
     
     [super dealloc];
 }
