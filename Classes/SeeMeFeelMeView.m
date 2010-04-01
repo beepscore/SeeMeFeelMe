@@ -39,10 +39,4 @@
 	return self;
 }
 
-
-#pragma mark Memory management methods
-- (void)dealloc {
-    [super dealloc];
-}
-
 @end

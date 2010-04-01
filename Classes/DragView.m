@@ -22,15 +22,17 @@
 }
 
 
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-
-
+#pragma mark Memory management
 - (void)dealloc {
     [dragViewSoundURL release], dragViewSoundURL = nil;    
     [super dealloc];
 }
+
+
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+
 
 - (void)playSound {    
     [self.delegate dragView:self didRequestPlaySoundAtURL:self.dragViewSoundURL];
