@@ -20,7 +20,6 @@
 		DE70BC9A1156A78E00F75A8E /* SoundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE70BC991156A78E00F75A8E /* SoundHelper.m */; };
 		DED24EC91158AB8900ED1AFE /* CartoonChipmunk.caf in Resources */ = {isa = PBXBuildFile; fileRef = DED24EC81158AB8900ED1AFE /* CartoonChipmunk.caf */; };
 		DED24ECB1158AB9B00ED1AFE /* SqueezeToy.caf in Resources */ = {isa = PBXBuildFile; fileRef = DED24ECA1158AB9B00ED1AFE /* SqueezeToy.caf */; };
-		DEF335281154CC9200B071C7 /* SeeMeFeelMeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +43,6 @@
 		DE70BC991156A78E00F75A8E /* SoundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundHelper.m; sourceTree = "<group>"; };
 		DED24EC81158AB8900ED1AFE /* CartoonChipmunk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartoonChipmunk.caf; sourceTree = "<group>"; };
 		DED24ECA1158AB9B00ED1AFE /* SqueezeToy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SqueezeToy.caf; sourceTree = "<group>"; };
-		DEF335261154CC9200B071C7 /* SeeMeFeelMeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeMeFeelMeView.h; sourceTree = "<group>"; };
-		DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeMeFeelMeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +67,6 @@
 				1D3623250D0F684500981E51 /* SeeMeFeelMeAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* SeeMeFeelMeViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* SeeMeFeelMeViewController.m */,
-				DEF335261154CC9200B071C7 /* SeeMeFeelMeView.h */,
-				DEF335271154CC9200B071C7 /* SeeMeFeelMeView.m */,
 				DE0BB7E21154558900B9C35A /* DragView.h */,
 				DE0BB7E31154558900B9C35A /* DragView.m */,
 				DE70BC981156A78E00F75A8E /* SoundHelper.h */,
@@ -192,7 +187,6 @@
 				1D3623260D0F684500981E51 /* SeeMeFeelMeAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* SeeMeFeelMeViewController.m in Sources */,
 				DE0BB7E41154558900B9C35A /* DragView.m in Sources */,
-				DEF335281154CC9200B071C7 /* SeeMeFeelMeView.m in Sources */,
 				DE70BC9A1156A78E00F75A8E /* SoundHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

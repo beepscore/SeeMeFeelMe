@@ -9,7 +9,6 @@
 //  Ref Dudney iPhone SDK Development Ch 18 Draw, Ch 17 Core Audio
 
 #import <UIKit/UIKit.h>
-#import "SeeMeFeelMeView.h"
 @class SoundHelper;
 @class DragView;
 
