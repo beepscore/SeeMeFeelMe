@@ -19,7 +19,10 @@
 // Note: assign delegate, don't retain it
 @property(nonatomic,assign)id <DragViewSoundDelegate> delegate;
 
-@property(nonatomic,retain)NSURL *dragViewSoundURL;
+// This property's type is an immutable value class that conforms to the NSCopying protocol,
+// so use copy not retain
+// Ref:  http://stackoverflow.com/questions/387959/nsstring-property-copy-or-retain
+@property(nonatomic,copy)NSURL *dragViewSoundURL;
 
 - (void)playSound;
 @end
