@@ -11,8 +11,7 @@
 @class SeeMeFeelMeViewController;
 
 @interface SeeMeFeelMeAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *window;
-    SeeMeFeelMeViewController *viewController;
+    // Xcode automatically adds instance variables to back properties
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

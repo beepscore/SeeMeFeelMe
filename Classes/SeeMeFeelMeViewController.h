@@ -13,10 +13,7 @@
 @class DragView;
 
 @interface SeeMeFeelMeViewController : UIViewController {
-#pragma mark instance variables
-    SoundHelper *soundHelper;
-	DragView *dragViewOne;
-	DragView *dragViewTwo;    
+    // Xcode automatically adds instance variables to back properties
 }
 
 #pragma mark properties

@@ -11,9 +11,7 @@
 @protocol DragViewSoundDelegate;
 
 @interface DragView : UIView {
-#pragma mark instance variables
-    id <DragViewSoundDelegate> delegate;
-    NSURL *dragViewSoundURL;
+    // Xcode automatically adds instance variables to back properties
 }
 #pragma mark properties
 // Note: assign delegate, don't retain it
