@@ -61,17 +61,4 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-
-// Ref http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmNibObjects.html
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-    // Release any retained outlets
-    // set properties to nil, which also releases them
-    self.soundHelper = nil;
-    self.dragViewOne = nil;
-    self.dragViewTwo = nil;
-    
-    [super viewDidUnload];
-}
-
 @end
