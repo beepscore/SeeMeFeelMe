@@ -17,14 +17,6 @@
     return self;
 }
 
-
-#pragma mark Memory management
-- (void)dealloc {
-    [_dragViewSoundURL release], _dragViewSoundURL = nil;
-    [super dealloc];
-}
-
-
 - (void)drawRect:(CGRect)rect {
     // Drawing code
 }

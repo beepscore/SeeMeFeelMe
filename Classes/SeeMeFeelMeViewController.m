@@ -74,13 +74,4 @@
     [super viewDidUnload];
 }
 
-
-- (void)dealloc {
-    [_soundHelper release], _soundHelper = nil;
-    [_dragViewOne release], _dragViewOne = nil;
-    [_dragViewTwo release], _dragViewTwo = nil;
-    
-    [super dealloc];
-}
-
 @end
