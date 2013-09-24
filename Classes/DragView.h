@@ -14,6 +14,7 @@
 
 #pragma mark properties
 // Note: delegate should use weak reference
+// Can set delegate in storyboard.
 @property(nonatomic, weak) IBOutlet id <DragViewSoundDelegate> delegate;
 
 // This property's type is an immutable value class that conforms to the NSCopying protocol,
