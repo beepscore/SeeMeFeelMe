@@ -17,11 +17,11 @@
 }
 
 #pragma mark properties
-@property (nonatomic, retain) IBOutlet DragView *dragViewOne;
-@property (nonatomic, retain) IBOutlet DragView *dragViewTwo;
+@property (nonatomic, strong) IBOutlet DragView *dragViewOne;
+@property (nonatomic, strong) IBOutlet DragView *dragViewTwo;
 
 // instantiate soundHelper in .xib file, connect IBOutlet to retain it
-@property(nonatomic,retain)IBOutlet SoundHelper *soundHelper;
+@property(nonatomic,strong)IBOutlet SoundHelper *soundHelper;
 
 @end
 

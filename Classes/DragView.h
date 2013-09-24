@@ -15,7 +15,7 @@
 }
 #pragma mark properties
 // Note: assign delegate, don't retain it
-@property(nonatomic,assign)id <DragViewSoundDelegate> delegate;
+@property(nonatomic,weak)id <DragViewSoundDelegate> delegate;
 
 // This property's type is an immutable value class that conforms to the NSCopying protocol,
 // so use copy not retain

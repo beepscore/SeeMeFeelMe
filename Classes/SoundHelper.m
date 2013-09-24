@@ -51,7 +51,7 @@ void SystemSoundsDemoCompletionProc (
          NULL,			// run loop (NULL==main)
          NULL,			// run loop mode (NULL==default)
          SystemSoundsDemoCompletionProc, // callback function
-         self			// data to provide on callback
+         (__bridge void *)(self)			// data to provide on callback
          );
         
         // statusLabel.text = @"Playing";
@@ -60,7 +60,7 @@ void SystemSoundsDemoCompletionProc (
     
     if (err != kAudioServicesNoError) {
         CFErrorRef error = CFErrorCreate(NULL, kCFErrorDomainOSStatus, err, NULL);
-        NSString *errorDesc = (NSString*) CFErrorCopyDescription (error);
+        NSString *errorDesc = (NSString*) CFBridgingRelease(CFErrorCopyDescription (error));
         UIAlertView *cantPlayAlert =
         [[UIAlertView alloc] initWithTitle:@"Cannot Play:"
                                    message: errorDesc
@@ -68,8 +68,6 @@ void SystemSoundsDemoCompletionProc (
                          cancelButtonTitle:@"OK"
                          otherButtonTitles:nil];
         [cantPlayAlert show];
-        [cantPlayAlert release]; 
-        [errorDesc release];
         CFRelease (error);
     }    
 }
