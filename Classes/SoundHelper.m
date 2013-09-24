@@ -42,7 +42,7 @@ void SystemSoundsDemoCompletionProc (
 	OSStatus err = kAudioServicesNoError;
     
     // find corresponding system sound file
-    err = AudioServicesCreateSystemSoundID((CFURLRef) soundURL, &soundID);    
+    err = AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundURL, &soundID);    
     
     if (err == kAudioServicesNoError) {
         // set up callback for sound completion
