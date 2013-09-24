@@ -10,12 +10,7 @@
 
 @implementation DragView
 
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-
-
-- (void)playSound {    
+- (void)playSound {
     [self.delegate dragView:self didRequestPlaySoundAtURL:self.dragViewSoundURL];
 }
 
