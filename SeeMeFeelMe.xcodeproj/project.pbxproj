@@ -12,13 +12,12 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		2899E5220DE3E06400AC0155 /* SeeMeFeelMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* SeeMeFeelMeViewController.xib */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* SeeMeFeelMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* SeeMeFeelMeViewController.m */; };
 		DE0BB7E41154558900B9C35A /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE0BB7E31154558900B9C35A /* DragView.m */; };
 		DE66E5071155DA8B00DD2ECC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE66E5061155DA8B00DD2ECC /* AudioToolbox.framework */; };
 		DE70BC9A1156A78E00F75A8E /* SoundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE70BC991156A78E00F75A8E /* SoundHelper.m */; };
 		DE7C961D17F16DDD0069EE3F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE7C961C17F16DDD0069EE3F /* Default-568h@2x.png */; };
+		DEB4BCB117F21700009EEFEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB4BCB017F21700009EEFEE /* Main.storyboard */; };
 		DED24EC91158AB8900ED1AFE /* CartoonChipmunk.caf in Resources */ = {isa = PBXBuildFile; fileRef = DED24EC81158AB8900ED1AFE /* CartoonChipmunk.caf */; };
 		DED24ECB1158AB9B00ED1AFE /* SqueezeToy.caf in Resources */ = {isa = PBXBuildFile; fileRef = DED24ECA1158AB9B00ED1AFE /* SqueezeToy.caf */; };
 		DEE7177511E540BD00DE372C /* beepscoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DEE7177411E540BD00DE372C /* beepscoreIcon.png */; };
@@ -31,8 +30,6 @@
 		1D6058910D05DD3D006BFB54 /* SeeMeFeelMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeMeFeelMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2899E5210DE3E06400AC0155 /* SeeMeFeelMeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeMeFeelMeViewController.xib; sourceTree = "<group>"; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28D7ACF60DDB3853001CB0EB /* SeeMeFeelMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeeMeFeelMeViewController.h; sourceTree = "<group>"; };
 		28D7ACF70DDB3853001CB0EB /* SeeMeFeelMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeeMeFeelMeViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,6 +41,7 @@
 		DE70BC981156A78E00F75A8E /* SoundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundHelper.h; sourceTree = "<group>"; };
 		DE70BC991156A78E00F75A8E /* SoundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundHelper.m; sourceTree = "<group>"; };
 		DE7C961C17F16DDD0069EE3F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DEB4BCB017F21700009EEFEE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DED24EC81158AB8900ED1AFE /* CartoonChipmunk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CartoonChipmunk.caf; sourceTree = "<group>"; };
 		DED24ECA1158AB9B00ED1AFE /* SqueezeToy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SqueezeToy.caf; sourceTree = "<group>"; };
 		DEE7177411E540BD00DE372C /* beepscoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beepscoreIcon.png; sourceTree = "<group>"; };
@@ -67,6 +65,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DEB4BCB017F21700009EEFEE /* Main.storyboard */,
 				1D3623240D0F684500981E51 /* SeeMeFeelMeAppDelegate.h */,
 				1D3623250D0F684500981E51 /* SeeMeFeelMeAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* SeeMeFeelMeViewController.h */,
@@ -113,8 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				DEE7177411E540BD00DE372C /* beepscoreIcon.png */,
-				2899E5210DE3E06400AC0155 /* SeeMeFeelMeViewController.xib */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* SeeMeFeelMe-Info.plist */,
 				DED24EC81158AB8900ED1AFE /* CartoonChipmunk.caf */,
 				DED24ECA1158AB9B00ED1AFE /* SqueezeToy.caf */,
@@ -185,8 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				2899E5220DE3E06400AC0155 /* SeeMeFeelMeViewController.xib in Resources */,
+				DEB4BCB117F21700009EEFEE /* Main.storyboard in Resources */,
 				DED24EC91158AB8900ED1AFE /* CartoonChipmunk.caf in Resources */,
 				DED24ECB1158AB9B00ED1AFE /* SqueezeToy.caf in Resources */,
 				DEE7177511E540BD00DE372C /* beepscoreIcon.png in Resources */,

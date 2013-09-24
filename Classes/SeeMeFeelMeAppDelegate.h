@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class SeeMeFeelMeViewController;
-
 @interface SeeMeFeelMeAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWindow *window;
-@property (nonatomic, strong) IBOutlet SeeMeFeelMeViewController *viewController;
 
 @end
 

@@ -7,13 +7,11 @@
 //
 
 #import "SeeMeFeelMeAppDelegate.h"
-#import "SeeMeFeelMeViewController.h"
 
 @implementation SeeMeFeelMeAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after app launch
-    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
