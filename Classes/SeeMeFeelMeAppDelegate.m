@@ -18,10 +18,4 @@
     return YES;
 }
 
-- (void)dealloc {
-    [self.viewController release];
-    [self.window release];
-    [super dealloc];
-}
-
 @end
