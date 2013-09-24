@@ -11,11 +11,6 @@
 
 @implementation SeeMeFeelMeViewController
 
-#pragma mark properties
-@synthesize soundHelper;
-@synthesize dragViewOne;
-@synthesize dragViewTwo;
-
 /*
  // The designated initializer. Override to perform setup that is required before the view is loaded.
  - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -81,9 +76,9 @@
 
 
 - (void)dealloc {
-    [soundHelper release], soundHelper = nil;
-    [dragViewOne release], dragViewOne = nil;
-    [dragViewTwo release], dragViewTwo = nil;
+    [_soundHelper release], _soundHelper = nil;
+    [_dragViewOne release], _dragViewOne = nil;
+    [_dragViewTwo release], _dragViewTwo = nil;
     
     [super dealloc];
 }

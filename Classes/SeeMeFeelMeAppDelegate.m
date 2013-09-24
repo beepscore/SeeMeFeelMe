@@ -11,20 +11,16 @@
 
 @implementation SeeMeFeelMeAppDelegate
 
-@synthesize window;
-@synthesize viewController;
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after app launch
     self.window.rootViewController = self.viewController;
-    [window makeKeyAndVisible];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
 - (void)dealloc {
-    [viewController release];
-    [window release];
+    [self.viewController release];
+    [self.window release];
     [super dealloc];
 }
 

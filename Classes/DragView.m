@@ -10,10 +10,6 @@
 
 @implementation DragView
 
-@synthesize delegate;
-@synthesize dragViewSoundURL;
-
-
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         // Initialization code
@@ -24,7 +20,7 @@
 
 #pragma mark Memory management
 - (void)dealloc {
-    [dragViewSoundURL release], dragViewSoundURL = nil;    
+    [_dragViewSoundURL release], _dragViewSoundURL = nil;
     [super dealloc];
 }
 
