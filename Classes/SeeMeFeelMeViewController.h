@@ -12,9 +12,7 @@
 @class SoundHelper;
 @class DragView;
 
-@interface SeeMeFeelMeViewController : UIViewController {
-    // Xcode automatically adds instance variables to back properties
-}
+@interface SeeMeFeelMeViewController : UIViewController
 
 #pragma mark properties
 @property (nonatomic, strong) IBOutlet DragView *dragViewOne;

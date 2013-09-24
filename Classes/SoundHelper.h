@@ -12,8 +12,6 @@
 #import "DragView.h"
 
 
-@interface SoundHelper : NSObject <DragViewSoundDelegate> {
-
-}
+@interface SoundHelper : NSObject <DragViewSoundDelegate>
 
 @end

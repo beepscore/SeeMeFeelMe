@@ -10,9 +10,8 @@
 
 @protocol DragViewSoundDelegate;
 
-@interface DragView : UIView {
-    // Xcode automatically adds instance variables to back properties
-}
+@interface DragView : UIView
+
 #pragma mark properties
 // Note: assign delegate, don't retain it
 @property(nonatomic,weak)id <DragViewSoundDelegate> delegate;
